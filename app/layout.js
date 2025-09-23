@@ -15,7 +15,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider
+    <ClerkProvider publishableKey={process.env.pk_test_c3VidGxlLWNyb3ctNTkuY2xlcmsuYWNjb3VudHMuZGV2JA}
       appearance={{
         baseTheme: dark,
       }}
@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
 
             <footer className="bg-muted/50 py-12">
               <div className="container mx-auto px-4 text-center text-gray-200">
-                <p>Made with 💗 by RoadsideCoder</p>
+                <p>Made with 💗 by Aastha</p>
               </div>
             </footer>
           </ThemeProvider>
