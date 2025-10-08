@@ -14,8 +14,11 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const footerText = "Empowering healthcare, one click at a time ✨"; // Change this to update footer
+
   return (
-    <ClerkProvider publishableKey={process.env.pk_test_c3VidGxlLWNyb3ctNTkuY2xlcmsuYWNjb3VudHMuZGV2JA}
+    <ClerkProvider
+      publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
       appearance={{
         baseTheme: dark,
       }}
@@ -35,9 +38,9 @@ export default function RootLayout({ children }) {
             <main className="min-h-screen">{children}</main>
             <Toaster richColors />
 
-            <footer className="bg-muted/50 py-12">
-              <div className="container mx-auto px-4 text-center text-gray-200">
-                <p>Made with 💗 by Aastha</p>
+            <footer className="text-center text-sm text-gray-200 py-4">
+              <div className="container mx-auto px-4">
+                <p>{footerText}</p>
               </div>
             </footer>
           </ThemeProvider>
